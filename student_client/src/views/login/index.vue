@@ -72,11 +72,11 @@ export default {
           let check = false
           let name = null
 
-          axios.get('http://localhost:10086/info/getCurrentTerm').then(function (resp) {
+          axios.get('http://localhost:8085/info/getCurrentTerm').then(function (resp) {
             sessionStorage.setItem("currentTerm", resp.data)
           })
 
-          axios.get('http://localhost:10086/info/getForbidCourseSelection').then(function (resp) {
+          axios.get('http://localhost:8085/info/getForbidCourseSelection').then(function (resp) {
             sessionStorage.setItem("ForbidCourseSelection", resp.data)
           })
 
