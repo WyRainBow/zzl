@@ -43,7 +43,7 @@ export default {
     else {
       this.ruleForm.tid = this.$route.query.tid
     }
-    axios.get('http://localhost:10086/teacher/findById/' + this.ruleForm.tid).then(function (resp) {
+    axios.get('http://localhost:8085/teacher/findById/' + this.ruleForm.tid).then(function (resp) {
       that.ruleForm = resp.data
     })
   },
@@ -63,7 +63,7 @@ export default {
             return
           }
           console.log(this.ruleForm)
-          axios.post("http://localhost:10086/teacher/updateTeacher", this.ruleForm).then(function (resp) {
+          axios.post("http://localhost:8085/teacher/updateTeacher", this.ruleForm).then(function (resp) {
             if (resp.data === true) {
               that.$message({
                 showClose: true,
